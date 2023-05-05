@@ -1,1 +1,11 @@
 ROCK PAPER SCISSORS TOP PROJECT
+
+Goal: Play Rock-Paper-Scissors against a pseudo-random number-generator corresponding to
+rock, paper or scissors. 
+
+Steps: 
+1. Create a random number function ranging from 1-3
+2. Create a rock paper scissor function with a parameter of a number from 1-3
+3. Create functionality by comparing the users input against the random numbers where
+1 = rock, 2 = paper, 3 = scissors
+4. Create a function that repeats the game for a set amount of times
