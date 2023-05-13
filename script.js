@@ -26,13 +26,3 @@ function rpsGame() // Plays  a round of the rock, paper, scissors game (rps)
         return `You chose ${playerChoice}, Opponent chose: ${opponentMove}. You lose...`;
     }
 }
-
-function game(roundAmount) // Plays the game for your chosen amount of times
-{
-    for (let i = 0; i < roundAmount; i++)
-    {
-        console.log(rpsGame());
-    }
-}
-
-game(5);
