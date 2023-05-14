@@ -11,7 +11,7 @@ function opponentChoice() // Generates a pseudo-random opponent choice
 function rpsGame() // Plays  a round of the rock, paper, scissors game (rps)
 {
     let opponentMove = opponentChoice();
-    playerChoice = prompt("What is your move? ");
+    playerChoice = prompt("M");
     playerChoice.toLowerCase()
 
     if (playerChoice === opponentMove)
@@ -26,3 +26,14 @@ function rpsGame() // Plays  a round of the rock, paper, scissors game (rps)
         return `You chose ${playerChoice}, Opponent chose: ${opponentMove}. You lose...`;
     }
 }
+
+const rockButton = document.querySelector(".rock-button");
+rockButton.addEventListener("click", );
+
+const paperButton = document.querySelector(".rock-button");
+paperButton.addEventListener("click", );
+
+const scissorButton = document.querySelector(".rock-button");
+scissorButton.addEventListener("click", );
+
+const resultsText = document.querySelector(".results-text");
