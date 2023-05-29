@@ -1,3 +1,9 @@
+const rockButton = document.querySelector(".rock-button");
+const paperButton = document.querySelector(".paper-button");
+const scissorsButton = document.querySelector(".scissors-button");
+
+const resultsText = document.querySelector(".results-text");
+
 function opponentChoice() // Generates a pseudo-random opponent choice
 {
     let choice = "";
@@ -8,32 +14,69 @@ function opponentChoice() // Generates a pseudo-random opponent choice
     return choice;
 }
 
-function rpsGame() // Plays  a round of the rock, paper, scissors game (rps)
+function rockGame()
 {
     let opponentMove = opponentChoice();
-    playerChoice = prompt("M");
-    playerChoice.toLowerCase()
+    let playerChoice = "rock";
 
     if (playerChoice === opponentMove)
     {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
         return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
     }
     else if (playerChoice === "rock" && opponentMove === "scissors" || playerChoice === "scissors" && opponentMove === "paper" || playerChoice === "paper" && opponentMove === "rock") 
     {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
         return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
     }
     else {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You lose.`;
         return `You chose ${playerChoice}, Opponent chose: ${opponentMove}. You lose...`;
     }
 }
 
-const rockButton = document.querySelector(".rock-button");
-rockButton.addEventListener("click", );
+function paperGame()
+{
+    let opponentMove = opponentChoice();
+    let playerChoice = "paper";
 
-const paperButton = document.querySelector(".rock-button");
-paperButton.addEventListener("click", );
+    if (playerChoice === opponentMove)
+    {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
+        return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
+    }
+    else if (playerChoice === "rock" && opponentMove === "scissors" || playerChoice === "scissors" && opponentMove === "paper" || playerChoice === "paper" && opponentMove === "rock") 
+    {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
+        return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
+    }
+    else {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You lose.`;
+        return `You chose ${playerChoice}, Opponent chose: ${opponentMove}. You lose...`;
+    }
+}
 
-const scissorButton = document.querySelector(".rock-button");
-scissorButton.addEventListener("click", );
+function scissorsGame()
+{
+    let opponentMove = opponentChoice();
+    let playerChoice = "scissors";
 
-const resultsText = document.querySelector(".results-text");
+    if (playerChoice === opponentMove)
+    {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
+        return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. It's a tie.`;
+    }
+    else if (playerChoice === "rock" && opponentMove === "scissors" || playerChoice === "scissors" && opponentMove === "paper" || playerChoice === "paper" && opponentMove === "rock") 
+    {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
+        return `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You win!`;
+    }
+    else {
+        resultsText.textContent = `You chose: ${playerChoice}, Opponent chose: ${opponentMove}. You lose.`;
+        return `You chose ${playerChoice}, Opponent chose: ${opponentMove}. You lose...`;
+    }
+}
+
+rockButton.addEventListener("click", rockGame);
+paperButton.addEventListener("click", paperGame);
+scissorsButton.addEventListener("click", scissorsGame);
